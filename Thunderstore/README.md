@@ -1,9 +1,10 @@
-﻿# Description
+# Description
 
 ## Makes custom buttons at the bottom of the main menu to link to URLS. Comma delimited list of button names and URLs in the config determine how many buttons and where they go.
 
 `This mod uses a file watcher. If the configuration file is not changed with BepInEx Configuration manager, but changed in the file directly, upon file save, it will reflect the changes.`
 
+You can fit 10 buttons on the screen before overlapping the version number. Though, I would not recommend that many.
 
 ---
 

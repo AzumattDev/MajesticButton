@@ -21,7 +21,7 @@ namespace MajesticButton
     public class MajesticButtonPlugin : BaseUnityPlugin
     {
         internal const string ModName = "MajesticButton";
-        internal const string ModVersion = "1.0.1";
+        internal const string ModVersion = "1.0.2";
         internal const string Author = "Azumatt";
         private const string ModGUID = Author + "." + ModName;
         private static string ConfigFileName = ModGUID + ".cfg";
@@ -122,6 +122,14 @@ namespace MajesticButton
                     {
                         var rectTransform = buttonParent.AddComponent<RectTransform>();
                         rectTransform.sizeDelta = new Vector2(10, 30);
+
+                        // Anchor to bottom left of the screen.
+                        rectTransform.anchorMin = new Vector2(0, 0); // The minimum anchor point (x, y) where (0, 0) is the bottom left.
+                        rectTransform.anchorMax = new Vector2(0, 0); // The maximum anchor point (x, y) where (0, 0) is the bottom left.
+
+                        // Offset from the anchor point
+                        rectTransform.anchoredPosition = originalButton.GetComponent<RectTransform>().anchoredPosition;
+
                     }
 
                     // Move the original button to the new parent.
