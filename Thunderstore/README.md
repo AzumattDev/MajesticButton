@@ -7,6 +7,9 @@
 
 ---
 
+![](https://github.com/AzumattDev/MajesticButton/assets/80414405/d0615e6d-ef10-4f54-9b4b-dd7820ddcbd4)
+
+
 <details>
 <summary><b>Installation Instructions</b></summary>
 
