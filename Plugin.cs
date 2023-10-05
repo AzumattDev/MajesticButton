@@ -21,7 +21,7 @@ namespace MajesticButton
     public class MajesticButtonPlugin : BaseUnityPlugin
     {
         internal const string ModName = "MajesticButton";
-        internal const string ModVersion = "1.0.2";
+        internal const string ModVersion = "1.0.3";
         internal const string Author = "Azumatt";
         private const string ModGUID = Author + "." + ModName;
         private static string ConfigFileName = ModGUID + ".cfg";
@@ -31,8 +31,8 @@ namespace MajesticButton
 
         public static readonly ManualLogSource MajesticButtonLogger = BepInEx.Logging.Logger.CreateLogSource(ModName);
 
-        internal static GameObject originalButton;
-        internal static List<GameObject> clonedButtons = new();
+        internal static GameObject originalButton = null!;
+        internal static readonly List<GameObject> clonedButtons = new();
         private string currentScene;
         internal static GameObject buttonParent;
 

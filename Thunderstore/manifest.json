@@ -1,9 +1,9 @@
 {
   "name": "MajesticButton",
-  "version_number": "1.0.2",
+  "version_number": "1.0.3",
   "website_url": "https://github.com/AzumattDev/MajesticButton",
   "description": "Makes custom buttons at the bottom of the main menu to link to URLS. Comma delimited list of button names and URLs in the config determine how many buttons and where they go.",
   "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.2105"
+    "denikson-BepInExPack_Valheim-5.4.2200"
   ]
 }

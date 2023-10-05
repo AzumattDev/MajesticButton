@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace MajesticButton.Utils;
@@ -46,27 +47,12 @@ public class Functions
 
     private static void UpdateButtonText(GameObject button, GameObject sourceButton, string text)
     {
-        var textComponent = button.GetComponentInChildren<Text>();
+        var textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
         if (textComponent != null)
         {
             textComponent.text = text;
-        }
-        
-        var outlineComponent = button.GetComponentInChildren<Outline>();
-        if (outlineComponent != null)
-        {
-            // Copy values
-            outlineComponent.effectColor = sourceButton.GetComponentInChildren<Outline>().effectColor;
-            outlineComponent.effectDistance = new Vector2(0.75f, 0.75f);
-            outlineComponent.useGraphicAlpha = sourceButton.GetComponentInChildren<Outline>().useGraphicAlpha;
-        }
-        else
-        {
-            var outlineComp = button.GetComponentInChildren<Text>().gameObject.AddComponent<Outline>();
-            // Copy values
-            outlineComp.effectColor = sourceButton.GetComponentInChildren<Outline>().effectColor;
-            outlineComp.effectDistance = new Vector2(0.75f, 0.75f);
-            outlineComp.useGraphicAlpha = sourceButton.GetComponentInChildren<Outline>().useGraphicAlpha;
+            textComponent.outlineColor = sourceButton.GetComponentInChildren<TextMeshProUGUI>().outlineColor;
+            textComponent.outlineWidth = 0.175f; // 0.175f is the default value for the outline width.
         }
     }
 
@@ -92,10 +78,10 @@ public class Functions
             if (source != null && newComponent != null)
             {
                 newComponent.m_button = newComponent.GetComponent<Button>();
-                newComponent.m_text = newComponent.GetComponentInChildren<Text>();
-                newComponent.m_defaultColor = new Color(1f, 161/255f, 60/255f, 1f);
+                newComponent.m_text = newComponent.GetComponentInChildren<TextMeshProUGUI>();
+                newComponent.m_defaultColor = new Color(1f, 161 / 255f, 60 / 255f, 1f);
 
-                newComponent.m_text.color = new Color(1f, 161/255f, 60/255f, 1f);
+                newComponent.m_text.color = new Color(1f, 161 / 255f, 60 / 255f, 1f);
 
                 newComponent.m_textMesh = source.m_textMesh;
                 newComponent.m_disabledColor = source.m_disabledColor;
