@@ -1,6 +1,6 @@
 {
   "name": "MajesticButton",
-  "version_number": "1.0.4",
+  "version_number": "1.0.5",
   "website_url": "https://github.com/AzumattDev/MajesticButton",
   "description": "Makes custom buttons at the bottom of the main menu to link to URLS. Comma delimited list of button names and URLs in the config determine how many buttons and where they go.",
   "dependencies": [
